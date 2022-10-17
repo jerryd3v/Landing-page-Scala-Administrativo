@@ -1,0 +1,534 @@
+/*Colores*/
+:root {
+  --colorPrimario: #FF7B00;
+  --colorSecundario: #009BD2;
+}
+
+/*Fuentes*/
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('./fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+    url('./fonts/gilroy-extrabold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('./fonts/gilroy-light-webfont.woff2') format('woff2'),
+    url('./fonts/gilroy-light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.79)), url(./images/back.jpg) center;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.containerEslogan {
+  min-height: 50vh;
+  margin-left: 1em;
+}
+
+.titulo {
+  font-size: 4em;
+  font-family: 'Cormorant-Upright';
+  margin-top: 50vh;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px #3e3e3d;
+}
+
+.parrafoTitulo {
+  font-family: 'Nunito';
+  font-size: 20px;
+  text-shadow: 2px 2px 5px #3e3e3d;
+}
+
+.logo {
+  width: 170px;
+  height: 30px;
+}
+
+.volver {
+  width: 100px;
+}
+
+.iconVolver {
+  padding-left: 4px;
+  width: 1.4em;
+  height: 1.3em;
+}
+
+.tituloTarjetas {
+  padding: 1em;
+  text-align: center;
+}
+
+.tituloText {
+  color: rgb(88, 88, 90);
+  font-size: 3em;
+  font-family: 'Cormorant-Upright';
+  font-weight: 600;
+}
+
+.tituloText::first-letter {
+  border-left: solid 3px #FF7B00;
+}
+
+.parrafoText {
+  color: rgb(128, 124, 120);
+  font-size: 18px;
+  font-family: 'Nunito';
+}
+
+.tarjeta {
+  width: 240px;
+  position: relative;
+  padding: 1em;
+  color: black;
+  border-radius: .4rem;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.tituloTarjeta {
+  font-size: 18px;
+  font-family: 'Cormorant-Upright';
+  color: rgb(109, 106, 106);
+  font-weight: 600;
+}
+
+.tarjeta p {
+  font-family: 'Nunito';
+}
+
+.iconTarjeta {
+  width: 70px;
+  height: 70px;
+  margin: 1rem;
+}
+
+.tituloTextScroll {
+  color: rgb(88, 88, 90);
+  font-family: 'Cormorant-Upright';
+  font-weight: 600;
+  font-style: italic;
+}
+
+.parrafoScroll {
+  font-family: 'Nunito';
+  font-size: 18px;
+}
+
+.main {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.imgSlide {
+  width: 450px;
+  height: 270px;
+}
+
+.containerTextoDes {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.textDeslizante {
+  max-width: 350px;
+  text-align: center;
+  color: rgb(99, 96, 96);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Nunito';
+}
+
+.textDeslizante::first-letter {
+  font-size: 38px;
+  color: #2969F0
+}
+
+/*Planes*/
+.containerPlanes {
+  background: #1d1d1d;
+  min-height: 100vh;
+}
+
+.planes {
+  border-radius: .7em;
+  border-radius: 50px;
+  background: #1d1d1d;
+box-shadow:  20px 20px 60px #191919,
+             -20px -20px 60px #212121;
+}
+
+.tituloPlanes {
+  font-family: 'Cormorant-Upright';
+  color: #fff;
+  font-size: 4em;
+}
+
+.tarjetasPlanes {
+  width: 250px;
+  height: 250px;
+  border-radius: 6px;
+  background: #1d1d1d;
+box-shadow:  14px 14px 28px #131313,
+             -14px -14px 28px #272727;
+  transition: all 1s !important;
+  overflow: hidden;
+}
+.tarjetasPlanes li {
+  color: #fff;
+}
+
+.tarjetasPlanes:hover {
+  background: linear-gradient(145deg, #1a1a1a, #1f1f1f);
+box-shadow:  14px 14px 28px #131313,
+             -14px -14px 28px #272727;
+    height: 500px;
+}
+
+.tituloPlan {
+  color: #fff;
+  text-align: center;
+}
+
+.tituloPlan p {
+  font-size: 14px;
+}
+
+.tituloPlan h2 {
+  color: var(--colorSecundario);
+  font-size: 2.4em;
+  font-weight: 800;
+}
+.PrecioStandar{
+  color: var(--colorPrimario) !important;
+}
+.botonContactar{
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  color: var(--colorSecundario);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: all 400ms;
+  
+}
+.botonContactar:hover{
+  background: var(--colorSecundario);
+  color: #fff;
+}
+.emprendedor{
+  color: var(--colorPrimario) !important;
+}
+.emprendedor:hover{
+  background: var(--colorPrimario);
+  color: #fff !important;
+}
+.tituloSkill{
+  color: var(--colorSecundario);
+  border-bottom: solid 1px rgb(94, 91, 91);
+  padding: 0;
+  ;
+}
+.emprendedorCaract{
+  color: var(--colorPrimario) !important;
+}
+.flechaPlanes{
+  width: 20px;
+  height: 20px;
+}
+/*Loader*/
+.containerLoader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  height: 100vh;
+  width: 100%;
+  z-index: 10000;
+}
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  animation: animacion 2s linear infinite;
+}
+
+
+@keyframes animacion {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  border-radius: 50%;
+  z-index: 1000;
+  z-index: 1;
+  filter: blur(30px);
+}
+
+.imgLoader {
+  padding-top: 1rem;
+  width: 250px;
+}
+
+/*Catactanos*/
+.cuboUno {
+  background: var(--colorPrimario);
+  padding: 2em;
+  box-sizing: border-box;
+
+}
+
+.tituloContacto {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: 600;
+}
+
+.contactoParrafo {
+  width: 350px;
+  padding-bottom: 13px;
+  border-bottom: solid 4px #fff;
+  font-family: 'Nunito';
+  color: #fff;
+}
+
+
+.comenzarSpan {
+
+  border-radius: 50px;
+  background: #FF7B00;
+  box-shadow: 20px 20px 44px #d96900,
+    -20px -20px 44px #ff8d00;
+  padding: .7em;
+  border-radius: 2em;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 600ms;
+}
+
+.comenzarSpan:hover {
+  background: #009BD2;
+}
+
+.comenzarLink {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.comenzarLink:hover {
+  color: #fff;
+
+}
+
+.cuboDos {
+  background: var(--colorSecundario);
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.imgMensajeUno {
+  width: 150px;
+  height: 150px;
+
+}
+
+.imgMensajeDos {
+  width: 250px;
+  height: 250px;
+}
+
+/*Pagina 404*/
+.imgNotFound {
+  width: 400px;
+  height: 400px;
+}
+
+.containerNotFound {
+  height: 100vh;
+  text-align: center;
+}
+
+.containerNotFound h1 {
+  font-size: 60px;
+}
+
+.containerNotFound h3 {
+  font-size: 28px;
+}
+
+.contactanosContainer {
+  padding-top: 5em;
+  height: 100vh;
+}
+
+.cuadroImgDesktop {
+  background: #fff;
+  height: 430px;
+  ;
+}
+
+.imgDesktop {
+  width: 305px;
+  height: 430px;
+  margin-bottom: 1em;
+  border-bottom: solid 45px var(--colorPrimario);
+  margin-bottom: -20px;
+}
+
+.imgMobile {
+  width: 205px;
+  height: 330px;
+  margin-bottom: 1em;
+  border-bottom: solid 45px var(--colorPrimario);
+  margin-bottom: -26px;
+}
+
+.circuloImgBlanco {
+  overflow: hidden;
+  background: rgb(232, 228, 228);
+  border: solid 7px var(--colorPrimario);
+  padding: 1em;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  width: 410px;
+  border-radius: 100%;
+  margin-bottom: -2em;
+
+}
+
+.circuloImgBlancoMobile {
+  overflow: hidden;
+  border: solid 7px var(--colorPrimario);
+  padding: 1em;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  width: 310px;
+  border-radius: 100%;
+  margin-bottom: -2em;
+
+}
+
+.cuadroImgMobile {
+  height: 300px;
+  padding-bottom: 2em;
+}
+
+.tarjetaContac {
+  text-align: center;
+  width: 240px;
+  position: relative;
+  padding: 1em;
+  color: black;
+  border-radius: .4rem;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  min-height: 200px;
+}
+
+.tarjetaContac h5 {
+  color: #3e3e3d;
+}
+
+.tarjetaContac p {
+  font-family: 'Nunito';
+  color: #3e3e3d;
+  font-size: 14px;
+}
+
+#correoText {
+  color: blue;
+  border-bottom: solid 1px blue;
+  padding: 0;
+  line-height: 1.3;
+  cursor: pointer;
+  
+}
+
+.listaRedes {
+  list-style: none !important;
+}
+
+.linkRedes {
+  text-decoration: none;
+}
+
+.telefonoTarjeta {
+  font-weight: 600;
+  line-height: 1;
+}
+
+.telefonoTarjeta:nth-child(3) {
+  margin-top: 1.5em;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+  .titulo {
+    font-size: 3em;
+  }
+  .tituloPlanes{
+    font-size: 2.7em;
+    margin-bottom: 1em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1201px) {}
