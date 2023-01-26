@@ -55,9 +55,9 @@ const about = () => {
           <div className="tarjetaContac m-2">
             <Phone size={'2em'} color={'#FF7B00'} className="iconContactanos"></Phone>
             <h5>Teléfonos</h5>
-            <p className="telefonoTarjeta"><Mobile size={'1.4em'} color={'#FF7B00'}/> 0414.365.66.96</p>
-            <p className="telefonoTarjeta"><Mobile size={'1.4em'} color={'#FF7B00'}/> 0424.267.61.98</p>
-            <p className="telefonoTarjeta"><LocalPhone size={'1.4em'} color={'#FF7B00'}/> 0212.782.59.60</p>
+            <p className="telefonoTarjeta"><Mobile size={'1.4em'} color={'#FF7B00'}/> xxx.xxx.xxx</p>
+            <p className="telefonoTarjeta"><Mobile size={'1.4em'} color={'#FF7B00'}/> xxx.xxx.xxx</p>
+            <p className="telefonoTarjeta"><LocalPhone size={'1.4em'} color={'#FF7B00'}/> xxx.xxx.xxx</p>
           </div>
         </div>
 
