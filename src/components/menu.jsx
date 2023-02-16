@@ -31,6 +31,9 @@ const menu = () => {
                                     <Link className='nav-link active' to="/pricing">Planes</Link>
                                 </li>
                                 <li className='nav-item volver'>
+                                    <Link className='nav-link active' to="/developer">Desarrollo</Link>
+                                </li>
+                                <li className='nav-item volver'>
                                     <Link className='nav-link active' to="/about">Contáctanos</Link>
                                 </li>
                             </ul>

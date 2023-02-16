@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import '../App.css';
 import { Link } from 'react-router-dom';
 
 //Componentes
 import Menu from '../components/menu';
 //Recursos de las tarjetas
-import Logo from '../images/logo.png';
 import Inventario from "../images/inventario.png";
 import Notas from "../images/notas.png";
 import Fiscal from "../images/fiscal.png";
@@ -74,19 +73,29 @@ function Home() {
         localStorage.setItem('geoIP', JSON.stringify(res.data));
     });
     let address = localStorage.getItem('geoIP');
-    
+    let pais = JSON.parse(localStorage.getItem('geoIP'));
 
     const insertarDatos = () => {
-        axios.post('https://www.compuhightech.com/wp/CRUD/peticiones.php', {'peticion': 'GUARDAR', 'ip' : IP, 'datos' : address, 'visitas': 1})
+        
+
+        axios.post('https://www.compuhightech.com/wp/CRUD/peticiones.php', {'peticion': 'GUARDAR', 'ip' : IP, 'pais' : pais.country , 'estado' : pais.region, 'datos' : address, 'visitas': 1, 'registro' : pais.timezone.current_time})
+
+        // axios.post('http://localhost/CRUD/peticiones.php', {'peticion': 'GUARDAR', 'ip' : IP, 'pais' : pais.country , 'estado' : pais.region, 'datos' : address, 'visitas': 1, 'registro' : pais.timezone.current_time})
         .then((res)=>{
 
 
-            if(res.status == 200){
+            if(res.status === 200){
                 console.log(`${res.data}`)}})
         
     }
     // JSON.parse(localStorage.getItem('geoIP'))
-    if (localStorage.getItem('geoIP')){
+
+     let ipExistente= JSON.parse(localStorage.getItem('geoIP'));
+    
+    if(ipExistente.ip === 'null'){
+        console.log('La IP es nula');
+    }
+     else{
         insertarDatos();
         console.log('datos enviados')
     }
@@ -111,18 +120,12 @@ function Home() {
                     </div>
                 </div>
             </div>
-            {/*Loader*/}
-            {/* <div className="containerLoader" id="containerLoader">
-
-                <div className="loader">
-                </div>
-                <img className="imgLoader" src={Logo} alt="logo" title="Logo Sistemas RJD" />
-            </div> */}
-            <div className='container-fluid main mt-3'>
+            
+            <div className='container-fluid main pt-3'>
 
                 {/*Tarjetas*/}
 
-                <div className='container-fluid containerTarjetas d-flex justify-content-center flex-column'>
+                <div className='container-fluid containerTarjetas d-flex pb-5 mb-0 justify-content-center flex-column'>
                     <div className=' col-12 tituloTarjetas'>
                         <h1 className='tituloText'>
                             Increíbles Funciones para
@@ -250,23 +253,10 @@ function Home() {
                     </div>
                 </div>
 
-                {/*Requisitos*/}
-                <div className='conatiner-fluid requisitosContainer'>
-                    <div className='requisitosContent'>
-                        <h1 className='tituloRequisitos'>
-
-                        </h1>
-                        <div className='requisitos'>
-                            <div cla>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                
 
                 {/*Boton de contacto*/}
-                <div className='container-fluid d-flex contactoContainer mt-5 p-0'>
+                <div className='container-fluid d-flex contactoContainer mt-0 p-0'>
 
                     <div className='col-12 col-md-6 col-lg-6 col-xl-6 cuboUno d-flex flex-column justify-content-center align-content-center'>
                         <img className='imgMensajeUno d-block d-md-none d-lg-none d-xl-none d-xxl-none' src={Mensaje} alt="" />
