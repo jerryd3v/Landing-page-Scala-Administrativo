@@ -240,9 +240,8 @@ function Developer() {
               eso es gracias a <strong>Google Ads</strong>.
               </p>
             </div>
-
-            <div className="col-8 d-flex justify-content-center seoBoxImg">
-              <img className="googleAds" src={GoogleADS} alt="ads-Img" title="Google ADS" />
+            <div className="col-8 d-flex justify-content-center ImgBoxSeo">
+              <img className="imgGoogleAds" src={GoogleADS} alt="ads-icon" title="Google ADS" />  
             </div>
 
           </div>
@@ -258,9 +257,8 @@ function Developer() {
               en el mundo. Se integra con otros servicios de Google, como Ads y Search Console. Con él es posible monitorear el perfil de quienes acceden a tu sitio web, páginas más visitadas, conversiones, dispositivos, ciudades y otros datos.
               </p>
             </div>
-
-            <div className="col-8 d-flex justify-content-center seoBoxImg">
-              <img className="googleAds" src={AnalyticsSEO} alt="analytics-img" title="Google Analytics" />
+            <div className="col-8 d-flex justify-content-center ImgBoxSeo">
+              <img className="imgGoogleAds" src={AnalyticsSEO} alt="ads-icon" title="Google Analytics" />  
             </div>
 
           </div>

@@ -550,7 +550,7 @@
   background-color: #fff;
   min-width: 350px;
 }
-.seoBoxImg{
+.ImgBoxSeo{
   min-width: 350px;
   background-color: #fff;
 }
@@ -571,7 +571,7 @@
 .textSeo{
   font-size: 1.25rem;
 }
-.googleAds{
+.imgGoogleAds{
   width: 70%;
   height: auto;
 }
